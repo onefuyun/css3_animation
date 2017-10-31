@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正方体</title>
+    <style>
+        main{
+            perspective: 1000px;
+
+        }
+        div{width: 200px;
+            height: 200px;
+            margin: 300px auto;
+            position: relative;
+
+            transform-style: preserve-3d;
+            perspective-origin: -200px -200px;
+            animation: xuanzhuan 5s linear infinite;
+        }
+        @keyframes xuanzhuan{
+            0%{
+                transform: rotateX(0deg) rotateY(0deg) ;
+            }
+            50%{
+                transform: rotateX(180deg) rotateY(180deg)  ;
+            }
+            100%{
+                transform: rotateX(360deg) rotateY(360deg)  ;
+            }
+        }
+       section{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+             
+            text-align: center;
+            line-height: 200px;
+            font-size: 80px;
+            font-weight: 700;
+        }
+       section:nth-child(1){
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: rgba(255, 0, 255, 0.5);
+        }section:nth-child(2){
+            background-color: rgba(255,  255,  0, 0.5);
+            transform: rotateX(-90deg) translateZ(100px);
+        } section:nth-child(3){
+            background-color: rgba(0,  255,  255, 0.5);
+            transform: rotateX(180deg) translateZ(100px);
+               
+        }section:nth-child(4){
+            background-color: rgba(0,  0,  255, 0.5);
+             transform:  translateZ(100px);
+        } section:nth-child(5){
+            background-color: rgba(0,  150,  0, 0.5);
+            transform: rotateY(90deg) translateZ(100px);
+        } section:nth-child(6){
+            background-color: rgba(255,  255,  255, 0.5);
+        transform: rotateY(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <section>生</section>
+            <section>快</section>
+            <section>乐</section>
+            <section>日</section>
+            <section>哈</section>
+            <section>哈</section>
+        </div>
+    </main>   
+</body>
+</html>
